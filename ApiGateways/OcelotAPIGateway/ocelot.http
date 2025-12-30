@@ -1,0 +1,11 @@
+@Ocelot.HostAddress = https://localhost:7105
+
+POST {{Ocelot.HostAddress}}/Auth/Login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "User@12345678"
+}
+###

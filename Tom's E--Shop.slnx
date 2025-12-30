@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/ApiGateways/">
+    <Project Path="ApiGateways/OcelotAPIGateway/OcelotAPIGateway.csproj" Id="182efbb3-fa55-4a89-b83c-b384f8043771" />
+  </Folder>
+  <Folder Name="/BackendServices/" />
+  <Folder Name="/BackendServices/AuthService/">
+    <Project Path="BackendServices/AuthService/AuthService.API/AuthService.API.csproj" Id="cf380370-5dbb-49e2-81e4-859c11dc8985" />
+    <Project Path="BackendServices/AuthService/AuthService.Application/AuthService.Application.csproj" />
+    <Project Path="BackendServices/AuthService/AuthService.Domain/AuthService.Domain.csproj" />
+    <Project Path="BackendServices/AuthService/AuthService.Infrastructure/AuthService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/BackendServices/CatalogService/">
+    <Project Path="BackendServices/CatalogService/CatalogService.Application/CatalogService.Application.csproj" />
+    <Project Path="BackendServices/CatalogService/CatalogService.Domain/CatalogService.Domain.csproj" />
+    <Project Path="BackendServices/CatalogService/CatalogService.Infrastructure/CatalogService.Infrastructure.csproj" />
+    <Project Path="CatalogService.API/CatalogService.API.csproj" Id="b0cef475-0808-4755-913d-90fca09889d7" />
+  </Folder>
+  <Folder Name="/FrontendServices/">
+    <Project Path="FrontendServices/Tom's E-shop/Tom's E-shop.csproj" Id="22644696-0fad-4294-af40-8af8f2e0d821" />
+  </Folder>
+</Solution>

@@ -1,0 +1,24 @@
+﻿using CatalogService.Application.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace CatalogService.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProductController : ControllerBase
+    {
+        private readonly IProductAppService _productAppService;
+        public ProductController(IProductAppService productAppService)
+        {
+            _productAppService = productAppService;
+        }
+
+        [HttpGet]
+        public IActionResult GetAllProducts()
+        {
+            var products = _productAppService.GetAll();
+            return Ok(products);
+        }
+    }
+}

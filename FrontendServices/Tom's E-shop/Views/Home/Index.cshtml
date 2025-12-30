@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProductModel>
+
+<div class="container my-4">
+    <div class="row g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card product-card h-100">
+
+                    <!-- Image -->
+                    <div class="product-image-wrapper">
+                        <img src="@product.ImageUrl"
+                             alt="@product.Name"
+                             class="product-image"
+                             onerror="this.src='/images/no-image.png'" />
+
+                        <!-- Quick View (desktop hover) -->
+                        <div class="quick-view d-none d-md-flex">
+                            <button class="btn btn-light btn-sm"
+                                    onclick="openQuickView('@product.Name','@product.Description','@product.ImageUrl','@product.UnitPrice')">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="fw-semibold text-truncate">@product.Name</h6>
+
+                        <span class="price mb-2">
+                            $@product.UnitPrice.ToString("0.00")
+                        </span>
+
+                        <!-- Mobile Add to Cart -->
+                        <button class="btn btn-primary btn-sm mt-auto add-to-cart"
+                                onclick="addToCart(this)">
+                            🛒 Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

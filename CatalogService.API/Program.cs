@@ -1,0 +1,20 @@
+using CatalogService.Infrastructure;
+
+var builder = WebApplication.CreateBuilder(args);
+
+ServiceRegistration.RegisterServices(builder.Services, builder.Configuration);
+// Add services to the container.
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
