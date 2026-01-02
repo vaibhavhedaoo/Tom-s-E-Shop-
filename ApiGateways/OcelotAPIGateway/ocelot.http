@@ -1,11 +1,19 @@
 @Ocelot.HostAddress = https://localhost:7105
-
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiUm9sZXMiOiJBZG1pbiIsImp0aSI6IjNiNGI0NTM2LTJkMzEtNDM5Ni1hM2FlLWM5MzY0YjZkYzQ2MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzY3MzQyNTE0LCJpc3MiOiIxODEyMTk4OTk3MzAyNTA5NDUxODEyMTk4OSIsImF1ZCI6Ind3dy5Ub20ncyBFLVNob3AuY29tIn0.AS7FBQMgaOKy8amwUTAKJulDIW3srnjDkyUG3wWC8o4
 POST {{Ocelot.HostAddress}}/Auth/Login
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "user@gmail.com",
-  "password": "User@12345678"
+  "email": "Admin@gmail.com",
+  "password": "Admin@12345678"
 }
 ###
+GET {{Ocelot.HostAddress}}/catalog/GetProducts
+Accept: application/json
+
+
+###
+GET {{Ocelot.HostAddress}}/product/GetProducts
+Accept: application/json
+Authorization : Bearer {{token}}

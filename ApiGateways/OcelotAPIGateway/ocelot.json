@@ -25,6 +25,25 @@
       "UpstreamPathTemplate": "/catalog/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post" ]
 
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7049
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "E-Shop@9730250945Vaibhavhedaoo12@gmail.com9730250945"
+      },
+      "RouteClaimsRequirement": {
+        "Roles": "Admin"
+      },
+      "UpstreamPathTemplate": "/product/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+
     }
   ]
 }
